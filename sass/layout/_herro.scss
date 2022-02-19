@@ -1,0 +1,43 @@
+.hero {
+    @include section-pading(200px, 200px)
+
+    background-image: linear-gradient(var(--gradient-in-bacground-herro)),
+        url(../images/background-phone-herro.jpg);
+    background-size: 1600px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero__title {
+    @include font(900, 44px, 1.36, 0.06em );
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--hero-title);
+    margin: 0 270px 30px;
+}
+
+.hero__btn {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: block;
+    margin: 0 auto 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 32px;
+    padding-left: 32px;
+    border: transparent;
+    border-radius: var(--border-btn-radius);
+    cursor: pointer;
+
+    font-family: inherit;
+    @include font(700, 16px, 1.87, 0.06em );
+    color: var(--project-background);
+    background-color: var(--brand-color);
+
+    &:hover,
+    &:focus {
+    background-color: var(--btn-hover);
+}
+}
+
