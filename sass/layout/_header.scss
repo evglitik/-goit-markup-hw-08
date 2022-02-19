@@ -4,7 +4,7 @@
 
 .logo-header {
     display: block;
-    @include section-pading(24px, 25px)
+    @include section-pading(24px, 25px);
 
     font-family: 'Raleway', sans-serif;
     @include font(700, 26px, 1.19, 0.03em );

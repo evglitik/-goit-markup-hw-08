@@ -31,19 +31,6 @@ img {
   display: block;
 }
 
-.fulse-title {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 :root {
   --brand-color: #2196f3;
   --logo-web: #2196f3;
@@ -79,6 +66,19 @@ img {
         0px 2px 2px rgba(0, 0, 0, 0.12);
   --btn-filtr-bacground: #f5f4fa;
   --bacground-about-text: rgba(47, 48, 58, 0.8);
+}
+
+.fulse-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .about-list__text {

@@ -6,7 +6,7 @@
 }
 
 .team {
-    @include section-pading() 
+    @include section-pading(); 
     background-color: var(--bacground-team-section);
 }
 

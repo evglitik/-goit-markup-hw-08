@@ -1,5 +1,5 @@
 .hero {
-    @include section-pading(200px, 200px)
+    @include section-pading(200px, 200px);
 
     background-image: linear-gradient(var(--gradient-in-bacground-herro)),
         url(../images/background-phone-herro.jpg);

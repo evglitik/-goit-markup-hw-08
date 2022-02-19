@@ -1,5 +1,5 @@
 .footer {
-    @include section-pading(60px, 60px)
+    @include section-pading(60px, 60px);
     background-color: var(--background-footer);
 }
 
