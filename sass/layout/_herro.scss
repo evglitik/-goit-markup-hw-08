@@ -8,13 +8,18 @@
     background-repeat: no-repeat;
 }
 
+.hero__content-container {
+    margin: 0 auto;
+    width: 696px;
+}
+
 .hero__title {
     @include font(900, 44px, 1.36, 0.06em );
     text-align: center;
     text-transform: uppercase;
 
     color: var(--hero-title);
-    margin: 0 270px 30px;
+    // margin: 0 270px 30px;
 }
 
 .hero__btn {

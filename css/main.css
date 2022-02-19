@@ -724,6 +724,11 @@ img {
   background-repeat: no-repeat;
 }
 
+.hero__content-container {
+  margin: 0 auto;
+  width: 696px;
+}
+
 .hero__title {
   font-weight: 900;
   font-size: 44px;
@@ -732,7 +737,6 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: var(--hero-title);
-  margin: 0 270px 30px;
 }
 
 .hero__btn {
