@@ -1,5 +1,9 @@
 .about {
+    display: none;
     @include section-pading(47px, 94px)
+    @include desc {
+        display: block;
+    }
 }
 
 .about-list {
