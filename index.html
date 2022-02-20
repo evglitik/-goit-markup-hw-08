@@ -40,12 +40,11 @@
                     </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
-            <button type="button" class="mob-menu-btn btn">
-                <svg class="mob-menu-btn__icon" width="40" height="40">
+            <button type="button" class="mob-open-menu btn">
+                <svg class="mob-open-menu__icon" width="40" height="40">
                     <use href="./images/icons.svg#icon-menu-mob"></use>
                 </svg>
             </button>
-        </div>
     </header>
 
     <main>
@@ -336,7 +335,7 @@
         </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container footer__container">
             <div class="footer__contacts">
             <a href="./index.html" class="footer__logo link"><span class="footer__logo-text">Web</span><span
@@ -402,7 +401,46 @@
 
             </div>
         </div>
-    </footer>  -->
+    </footer>
+
+            <div class="mobail-menu mobail-menu--open">
+                <button type="button" class="btn mobail-menu__close-btn">
+                    <svg class="mobail-menu__close-icon" width="40" height="40">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            <div class="mobail-menu__flex-container">
+                <ul class="mobail-navigation-list list">
+                    <li class="mobail-navigation-list__item"><a href="./index.html"class="mobail-navigation-list__link link mobail-navigation-list__link--interactiv">Студия</a></li>
+                    <li class="mobail-navigation-list__item"><a href="./portfolio.html" class="mobail-navigation-list__link link">Портфолио</a></li>
+                    <li class="mobail-navigation-list__item"><a href="" class="mobail-navigation-list__link link">Контакты</a></li>
+                </ul>
+            <div class="mobail-menu__down-container">
+                <ul class="mobail-contact-list list">
+                    <li class="mobail-contact-list__item item">
+                        <a href="tel:+380961111111" class="mobail-contact-list__tell link">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mobail-contact-list__item item">
+                        <a href="mailto:info@devstudio.com" class="mobail-contact-list__mail link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobail-social-list list">
+                    <li class="mobail-social-list__item">
+                        <a href="" class="mobail-social-list__link link">Instagram</a>
+                    </li>
+                    <li class="mobail-social-list__item">
+                        <a href="" class="mobail-social-list__link link">Twitter</a>
+                    </li>
+                    <li class="mobail-social-list__item">
+                        <a href="" class="mobail-social-list__link link">Facebook</a>
+                    </li>
+                    <li class="mobail-social-list__item">
+                        <a href="" class="mobail-social-list__link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            </div>
 
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
@@ -462,5 +500,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobail-menu.js"></script>
 </body>
 </html>
