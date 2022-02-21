@@ -142,22 +142,184 @@
 
 .header {
     border-bottom: 1px solid var(--header-bottom-line);
-    // height: 60px;
     @include section-pading(10px, 10px);
+    @include tablet {
+        @include section-pading(0, 0);
+    }
+    //     @include desc {
+    //     @include section-pading(0, 0);
+    // }
+}
+
+.logo-header {
+    font-family: 'Raleway', sans-serif;
+    @include font(700, 24px, 1.16, 0.03em);
+    text-decoration: none;
+    &__text {
+        color: var(--logo-web);
+    }
+    &__text--darck {
+        color: var(--logo-studio);
+    }
+    @include tablet {
+        @include section-pading(26px, 26px);
+    }
+    @include desc {
+        @include font(700, 26px, 1.19, 0.03em);
+        @include section-pading(24px, 24px);
+    }
 }
 
 .header-contact-list {
     display: none;
+    @include tablet {
+        display: block;
+    }
 }
 
 .header-list {
     display: none;
+    @include tablet {
+        display: block;
+    }
 }
 
 .header__container {
     display: flex;
     align-items: center;
 }
+
+.navigation__list {
+    @include tablet {
+        display: flex;
+    }
+}
+
+.header__logo {
+    @include tablet {
+        margin-right: 88px;
+    }
+    @include desc {
+        margin-right: 93px;
+    }
+}
+
+.header-list__item {
+    @include tablet {
+        // position: relative;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+        @include desc {
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+    }
+}
+
+.header-list__link {
+    @include tablet {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        position: relative;
+        @include font(500, 14px, 1.14, 0.02em);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        color: var(--text-black);
+        &:hover,
+        &:focus {
+            color: var(--brand-color);
+        }
+    }
+        @include desc {
+            @include font(500, 14px, 1.14, 0.02em);
+    }
+}
+
+.header-list__link--interactiv-line::after {
+    @include tablet {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #2196f3;
+        border-radius: 2px;
+
+        position: absolute;
+        bottom: 0;
+    }
+        @include desc {
+            bottom: -1px;
+    }
+}
+
+.header__contact-list {
+    @include tablet {
+        margin-left: auto;
+    }
+        @include desc {
+            display: flex;
+    }
+}
+
+.header-contact-list__item {
+    @include tablet {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+        @include desc {
+            &:not(:last-child) {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+    }
+}
+
+.header-contact-list__mail,
+.header-contact-list__tell {
+    @include tablet {
+        display: flex;
+        color: var(--text-gray);
+        align-items: center;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:focus,
+        &:hover {
+            color: var(--brand-color);
+        }
+    }
+        @include desc {
+            padding: 32px 0 32px 0;
+    }
+}
+
+.header-contact-list__icon-tel,
+.header-contact-list__icon-mail {
+    @include tablet {
+        margin-right: 8px;
+        fill: currentColor;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mobail-menu
 
 .mob-open-menu {
     width: 40px;
@@ -174,31 +336,23 @@
     &:focus {
         color: var(--brand-color);
     }
+    @include tablet {
+        display: none;
+    }
 }
 
 .mob-open-menu__icon {
     fill: currentColor;
 }
 
-.logo-header {
-    // @include section-pading(24px, 25px);
-
-    font-family: 'Raleway', sans-serif;
-    // @include font(700, 26px, 1.19, 0.03em );
-    @include font(700, 24px, 1.16, 0.03em);
-    text-decoration: none;
-    &__text {
-        color: var(--logo-web);
-    }
-    &__text--darck {
-        color: var(--logo-studio);
-    }
-}
-
 .mobail-menu {
+    opacity: 1;
+
+    // position: fixed;
     position: fixed;
     top: 0;
     left: 0;
+    transform: translateX(0);
     width: 100vw;
     height: 100vh;
 
@@ -207,12 +361,24 @@
     padding-left: 40px;
 
     background-color: #ffffff;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobail-menu.mobail-menu--open {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
 }
 
 .mobail-menu__close-btn {
     position: absolute;
+    transform: scale(1) rotateX(0);
     right: 15px;
     top: 10px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     border: none;
     background-color: transparent;
@@ -220,6 +386,7 @@
     &:hover,
     &:focus {
         color: var(--brand-color);
+        transform: scale(1.2) rotate(90deg);
     }
 }
 
@@ -230,6 +397,7 @@
 .mobail-navigation-list__link {
     @include font(500, 40px, 1.17, 0.02em);
     color: var(--text-black);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:not(:last-child) {
         margin-bottom: 32px;
     }
@@ -262,6 +430,7 @@
     @include font(500, 34px, 1.17, 0.02em);
     color: #757575;
     margin-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
         color: var(--brand-color);
@@ -271,6 +440,7 @@
 .mobail-contact-list__mail {
     @include font(500, 24px, 1.16, 0.02em);
     color: #757575;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
         color: var(--brand-color);
@@ -291,14 +461,9 @@
 .mobail-social-list__link {
     @include font(500, 18px, 1.22, 0.02em);
     color: #2196f3;
-}
-
-.mobail-menu--open {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-.mobail-menu {
-    opacity: 1;
+    &:hover,
+    &:focus {
+        color: #757575;
+        border-bottom: solid 1px rgba(33, 33, 33, 0.2);
+    }
 }
