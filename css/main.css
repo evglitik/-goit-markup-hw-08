@@ -136,8 +136,8 @@ img {
 
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 521px;
+  max-width: 450px;
+  width: 100%;
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -146,6 +146,12 @@ img {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .modal__btn-close {
@@ -174,11 +180,20 @@ img {
 .modal-form__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 12px;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form__inputs-box {
@@ -261,11 +276,25 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
   position: relative;
+  color: #757575;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 447px) {
+  .modal-form__label-terms {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__label-terms {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form__input-terms {
@@ -273,12 +302,20 @@ img {
 }
 
 .modal-form__terms-user-link {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   text-decoration-line: underline;
   margin-left: 0.3em;
   color: #2196f3;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__terms-user-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form__btn-submit {
@@ -525,11 +562,18 @@ img {
   letter-spacing: 0.03em;
 }
 
+.footer-list__item:first-child {
+  margin-bottom: 9px;
+}
+
+.footer-list__item:last-child {
+  margin-bottom: 60px;
+}
+
 .footer-list__tell {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #ffffff99;
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .footer-list__tell:hover, .footer-list__tell:focus {
@@ -543,7 +587,6 @@ img {
 }
 
 .footer-list__mail {
-  margin-bottom: 9px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #ffffff99;
   text-align: center;
@@ -993,6 +1036,7 @@ img {
   border: none;
   padding: 0;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mob-open-menu:hover, .mob-open-menu:focus {
@@ -1309,15 +1353,35 @@ img {
 
 .filtr-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .filtr-list {
+    justify-content: center;
+  }
 }
 
 .portfolio__filter {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-.filtr-list__item + .filtr-list__item {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .portfolio__filter {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__filter {
+    margin-bottom: 50px;
+  }
+}
+
+.filtr-list__item:not(:last-child) {
+  margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .filtr-list__btn {
@@ -1342,22 +1406,39 @@ img {
 }
 
 /* ---------сетка портфолио---------  */
-.gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
+.gallery-list__img {
+  width: 100%;
 }
 
 .portfolio__gallery {
-  margin-left: -30px;
-  margin-top: -30px;
+  min-height: 100vh;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .gallery-list__item {
-  margin-left: 30px;
-  margin-top: 30px;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-bottom: 30px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-list__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery-list__item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .gallery-list__link {
@@ -1375,8 +1456,15 @@ img {
 }
 
 .portfolio {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
 }
 
 .gallery-list__text-container {

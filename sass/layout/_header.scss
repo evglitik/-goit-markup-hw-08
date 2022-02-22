@@ -211,10 +211,10 @@
             margin-right: 20px;
         }
     }
-        @include desc {
-            &:not(:last-child) {
-                margin-right: 50px;
-            }
+    @include desc {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
     }
 }
 
@@ -231,8 +231,8 @@
             color: var(--brand-color);
         }
     }
-        @include desc {
-            @include font(500, 14px, 1.14, 0.02em);
+    @include desc {
+        @include font(500, 14px, 1.14, 0.02em);
     }
 }
 
@@ -248,8 +248,8 @@
         position: absolute;
         bottom: 0;
     }
-        @include desc {
-            bottom: -1px;
+    @include desc {
+        bottom: -1px;
     }
 }
 
@@ -257,8 +257,8 @@
     @include tablet {
         margin-left: auto;
     }
-        @include desc {
-            display: flex;
+    @include desc {
+        display: flex;
     }
 }
 
@@ -268,11 +268,11 @@
             margin-bottom: 10px;
         }
     }
-        @include desc {
-            &:not(:last-child) {
-                margin-right: 30px;
-                margin-bottom: 0;
-            }
+    @include desc {
+        &:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -288,8 +288,8 @@
             color: var(--brand-color);
         }
     }
-        @include desc {
-            padding: 32px 0 32px 0;
+    @include desc {
+        padding: 32px 0 32px 0;
     }
 }
 
@@ -300,24 +300,6 @@
         fill: currentColor;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // mobail-menu
 
@@ -332,6 +314,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
         color: var(--brand-color);

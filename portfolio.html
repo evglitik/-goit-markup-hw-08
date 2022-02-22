@@ -22,18 +22,16 @@
         <div class="container header__container">
             <a href="./index.html" class="logo-header header__logo link"><span class="logo-header__text">Web</span><span
                     class="logo-header__text--darck">Studio</span></a>
-            <!--Навигация-->
             <nav class="navigation">
                 <ul class="header-list navigation__list list">
                     <li class="header-list__item item"><a href="./index.html"
-                            class="header-list__link link">Студия</a></li>
+                            class="header-list__link link header-list__link--interactiv-line">Студия</a></li>
                     <li class="header-list__item item"><a href="./portfolio.html"
-                            class="header-list__link link header-list__link--interactiv-line">Портфолио</a></li>
+                            class="header-list__link link">Портфолио</a></li>
                     <li class="header-list__item item"><a href="" class="header-list__link link">Контакты</a></li>
                 </ul>
             </nav>
-            <!--Контакты-->
-            <ul class="header-contact-list list">
+            <ul class="header-contact-list header__contact-list list">
                 <li class="header-contact-list__item item"> <a href="mailto:info@devstudio.com"
                         class="header-contact-list__mail link"><svg class="header-contact-list__icon-mail" width="16"
                             height="12">
@@ -47,17 +45,20 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
-        </div>
+            <button type="button" class="mob-open-menu btn">
+                <svg class="mob-open-menu__icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu-mob"></use>
+                </svg>
+            </button>
     </header>
-
 
 <main>
     <section class="portfolio">
         <div class="container">
         <h1 class="fulse-title portfolio__title">Портфолио</h1>
         <ul class="filtr-list portfolio__filter list">
-            <li class="filtr-list__item item"><button type="button" data-filter="web-site" class="filtr-list__btn button-type-web-site">Веб-сайты</button></li>
             <li class="filtr-list__item item"><button type="button" data-filter="all" class="filtr-list__btn button-type-all">Все</button></li>
+            <li class="filtr-list__item item"><button type="button" data-filter="web-site" class="filtr-list__btn button-type-web-site">Веб-сайты</button></li>
             <li class="filtr-list__item item"><button type="button" data-filter="apps" class="filtr-list__btn button-type-apps">Приложения</button></li>
             <li class="filtr-list__item item"><button type="button" data-filter="dizain" class="filtr-list__btn button-type-disain">Дизайн</button></li>
             <li class="filtr-list__item item"><button type="button" data-filter="marc" class="filtr-list__btn button-type-marc">Маркетинг</button></li>
@@ -246,7 +247,6 @@
                 </ul>
             </div>
             <div class="footer-form-container">
-                <!-- <p class="footer-form-text">Подпишитесь на рассылку</p> -->
                 <form class="footer-form">
     
                     <div class="footer-form__container--column">
@@ -269,7 +269,51 @@
         </div>
     </footer>
 
+        <!-- mobail navbar menu -->
+        <div class="mobail-menu mobail-menu--open">
+            <button type="button" class="btn mobail-menu__close-btn">
+                <svg class="mobail-menu__close-icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <div class="mobail-menu__flex-container">
+                <ul class="mobail-navigation-list list">
+                    <li class="mobail-navigation-list__item"><a href="./index.html"
+                            class="mobail-navigation-list__link link mobail-navigation-list__link--interactiv">Студия</a></li>
+                    <li class="mobail-navigation-list__item"><a href="./portfolio.html"
+                            class="mobail-navigation-list__link link">Портфолио</a></li>
+                    <li class="mobail-navigation-list__item"><a href="" class="mobail-navigation-list__link link">Контакты</a>
+                    </li>
+                </ul>
+                <div class="mobail-menu__down-container">
+                    <ul class="mobail-contact-list list">
+                        <li class="mobail-contact-list__item item">
+                            <a href="tel:+380961111111" class="mobail-contact-list__tell link">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mobail-contact-list__item item">
+                            <a href="mailto:info@devstudio.com" class="mobail-contact-list__mail link">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobail-social-list list">
+                        <li class="mobail-social-list__item">
+                            <a href="" class="mobail-social-list__link link">Instagram</a>
+                        </li>
+                        <li class="mobail-social-list__item">
+                            <a href="" class="mobail-social-list__link link">Twitter</a>
+                        </li>
+                        <li class="mobail-social-list__item">
+                            <a href="" class="mobail-social-list__link link">Facebook</a>
+                        </li>
+                        <li class="mobail-social-list__item">
+                            <a href="" class="mobail-social-list__link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     <script src="./js/filtr.js"></script>
+    <script src="./js/mobail-menu.js"></script>
 </body>
 
 </html>

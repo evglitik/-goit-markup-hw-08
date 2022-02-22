@@ -1,14 +1,27 @@
 .filtr-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include tablet {
+        justify-content: center;
+    }
 }
 
 .portfolio__filter {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    @include tablet {
+        margin-bottom: 30px;
+    }
+    @include desc {
+        margin-bottom: 50px;
+    }
 }
 
-.filtr-list__item + .filtr-list__item {
-    margin-left: 8px;
+.filtr-list__item {
+    &:not(:last-child) {
+        margin-right: 8px;
+        margin-bottom: 15px;
+    }
 }
 
 .filtr-list__btn {
@@ -21,7 +34,7 @@
     cursor: pointer;
 
     font-family: inherit;
-    @include font(500, 16px, 1.62, 0.03em );
+    @include font(500, 16px, 1.62, 0.03em);
     color: var(--text-black);
     background-color: var(--btn-filtr-bacground);
 
@@ -34,22 +47,38 @@
 }
 
 /* ---------сетка портфолио---------  */
-.gallery-list {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 100vh;
+// .gallery-list {
+//     // display: flex;
+//     // flex-wrap: wrap;
+// }
+
+.gallery-list__img {
+    width: 100%;
 }
 
 .portfolio__gallery {
-    margin-left: -30px;
-    margin-top: -30px;
+    min-height: 100vh;
+    margin-bottom: -30px;
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+    }
+    @include desc {
+    }
 }
 
 .gallery-list__item {
-    margin-left: 30px;
-    margin-top: 30px;
-    flex-basis: calc(100% / 3 - 30px);
+    margin-bottom: 30px;
+    // flex-basis: calc(100% - 30px);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {
+        flex-basis: calc(100% / 2 - 30px);
+        margin-left: 30px;
+    }
+    @include desc {
+                flex-basis: calc(100% / 3 - 30px);
+    }
 }
 
 .gallery-list__link {
@@ -68,7 +97,10 @@
 }
 
 .portfolio {
-    @include section-pading(90px, 90px)
+    @include section-pading(60px, 60px);
+    @include desc {
+        @include section-pading(90px, 90px);
+    }
 }
 
 .gallery-list__text-container {
@@ -99,19 +131,19 @@
 
 .gallery-list__tumb-text {
     padding: 63px 24px;
-    @include font(null, 18px, 1.56, 0.03em );
+    @include font(null, 18px, 1.56, 0.03em);
     color: #ffffff;
 }
 
 /* Portfolio-list */
 .gallery-list__title {
     margin-bottom: 10px;
-    @include font(700, 18px, 2, 0.06em );
+    @include font(700, 18px, 2, 0.06em);
     color: var(--text-black);
 }
 
 .gallery-list__text {
-    @include font(null, 16px, 1.87, 0.03em );
+    @include font(null, 16px, 1.87, 0.03em);
     color: var(--text-gray);
 }
 
