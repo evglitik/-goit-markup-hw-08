@@ -1187,10 +1187,16 @@ img {
   padding-bottom: 118px;
   max-width: 1600px;
   margin: 0 auto;
-  background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro-mob.jpg);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro-mob.jpg);
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro-mob-2x.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1199,11 +1205,23 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro-tablet-2x.jpg);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro-2x.jpg);
   }
 }
 

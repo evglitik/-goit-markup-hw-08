@@ -1,20 +1,31 @@
 .hero {
     @include section-pading(118px, 118px);
-
     max-width: 1600px;
     margin: 0 auto;
-    background-image: linear-gradient(var(--gradient-in-bacground-herro)),
-        url(../images/background-phone-herro-mob.jpg);
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(var(--gradient-in-bacground-herro)),
+        url(../images/background-phone-herro-mob.jpg);
+    @include pixels-2x {
+        background-image: linear-gradient(var(--gradient-in-bacground-herro)),
+            url(../images/background-phone-herro-mob-2x.jpg);
+    }
     @include tablet {
         background-image: linear-gradient(var(--gradient-in-bacground-herro)),
             url(../images/background-phone-herro-tablet.jpg);
+        @include pixels-2x {
+            background-image: linear-gradient(var(--gradient-in-bacground-herro)),
+                url(../images/background-phone-herro-tablet-2x.jpg);
+        }
     }
     @include desc {
         background-image: linear-gradient(var(--gradient-in-bacground-herro)),
             url(../images/background-phone-herro.jpg);
+        @include pixels-2x {
+            background-image: linear-gradient(var(--gradient-in-bacground-herro)),
+                url(../images/background-phone-herro-2x.jpg);
+        }
         @include section-pading(200px, 200px);
     }
 }
