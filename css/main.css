@@ -1187,14 +1187,21 @@ img {
   padding-bottom: 118px;
   max-width: 1600px;
   margin: 0 auto;
-  background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro.jpg);
+  background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro-mob.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro-tablet.jpg);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero {
+    background-image: linear-gradient(var(--gradient-in-bacground-herro)), url(../images/background-phone-herro.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
   }

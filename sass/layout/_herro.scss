@@ -4,11 +4,17 @@
     max-width: 1600px;
     margin: 0 auto;
     background-image: linear-gradient(var(--gradient-in-bacground-herro)),
-        url(../images/background-phone-herro.jpg);
+        url(../images/background-phone-herro-mob.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @include tablet {
+        background-image: linear-gradient(var(--gradient-in-bacground-herro)),
+            url(../images/background-phone-herro-tablet.jpg);
+    }
     @include desc {
+        background-image: linear-gradient(var(--gradient-in-bacground-herro)),
+            url(../images/background-phone-herro.jpg);
         @include section-pading(200px, 200px);
     }
 }
@@ -16,25 +22,25 @@
 .hero__content-container {
     margin: 0 auto;
     max-width: 360px;
-        @include desc {
-            max-width: 696px;
-        }
+    @include desc {
+        max-width: 696px;
+    }
 }
 
 .hero__title {
     // @include font(900, 44px, 1.36, 0.06em );
-    @include font(900, 26px, 1.62, 0.06em );
+    @include font(900, 26px, 1.62, 0.06em);
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
     color: var(--hero-title);
 
     @include tablet {
-        @include font(900, 26px, 1.62, 0.06em );
+        @include font(900, 26px, 1.62, 0.06em);
     }
     @include desc {
-        @include font(900, 44px, 1.36, 0.06em );
-        }
+        @include font(900, 44px, 1.36, 0.06em);
+    }
 }
 
 .hero__btn {
@@ -51,13 +57,12 @@
     cursor: pointer;
 
     font-family: inherit;
-    @include font(700, 16px, 1.87, 0.06em );
+    @include font(700, 16px, 1.87, 0.06em);
     color: var(--project-background);
     background-color: var(--brand-color);
 
     &:hover,
     &:focus {
-    background-color: var(--btn-hover);
+        background-color: var(--btn-hover);
+    }
 }
-}
-
