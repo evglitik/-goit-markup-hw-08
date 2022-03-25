@@ -62,7 +62,7 @@
 .header-list__item {
     @include tablet {
         &:not(:last-child) {
-            margin-right: 20px;
+            margin-right: 50px;
         }
     }
     @include desc {
@@ -133,6 +133,10 @@
 .header-contact-list__mail,
 .header-contact-list__tell {
     @include tablet {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
         display: flex;
         color: var(--text-gray);
         align-items: center;
@@ -143,6 +147,10 @@
         }
     }
     @include desc {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
         padding: 32px 0 32px 0;
     }
 }

@@ -51,6 +51,9 @@
     }
     &:last-child {
         margin-bottom: 60px;
+        @include desc {
+            margin-bottom: 0px;
+        }
     }
 }
 
@@ -62,7 +65,7 @@
     &:focus {
         color: var(--brand-color);
     }
-    @include desc{
+    @include desc {
         margin-bottom: 0;
     }
 }
@@ -96,6 +99,7 @@
     }
     @include desc {
         margin-right: 93px;
+        margin-bottom: 0px;
         width: auto;
     }
 }

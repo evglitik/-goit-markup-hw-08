@@ -6,11 +6,15 @@
 }
 
 .clients__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
     @include font(700, 28px, 1.17, 0.03em);
+    @include tablet {
+        margin-bottom: 30px;
+    }
     @include desc {
         @include font(700, 36px, 1.16, 0.03em);
+        margin-bottom: 50px;
     }
 }
 

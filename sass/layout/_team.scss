@@ -1,19 +1,23 @@
 .team__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @include font(700, 28px, 1.17, 0.03em);
     text-align: center;
     color: var(--text-black);
 
+    @include tablet {
+        margin-bottom: 30px;
+    }
     @include desc {
         @include font(700, 36px, 1.17, 0.03em);
+        margin-bottom: 50px;
     }
 }
 
 .team {
-    @include section-pading( 60px, 60px); 
+    @include section-pading(60px, 60px);
     background-color: var(--bacground-team-section);
     @include desc {
-        @include section-pading(); 
+        @include section-pading();
     }
 }
 
@@ -21,33 +25,27 @@
     width: 100%;
 }
 
-
 .team-list {
-    @include tablet{
+    @include tablet {
         display: flex;
         flex-wrap: wrap;
-        margin-right: -30px;
+        margin-left: -30px;
         margin-bottom: -30px;
     }
 }
 
-
 .team-list__item {
     box-shadow: var(--shadow-team-card);
     background-color: #ffffff;
-    @include tablet{
+    margin-bottom: 30px;
+    @include tablet {
         width: calc(100% / 2 - 30px);
-        margin-right: 30px;
+        margin-left: 30px;
     }
-    @include desc{
+    @include desc {
         width: calc(100% / 4 - 30px);
     }
 }
-
-.team-list__item {
-    margin-bottom: 30px;
-}
-
 
 .team-list__text-tumb {
     padding-top: 30px;
